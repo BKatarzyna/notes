@@ -12,13 +12,14 @@
     <h:body>
 
         <h:form>
+            <div>
             <h:outputText value="Wpisz tekst:" /><br/>
             <h:inputTextarea id="text" value="#{pageBean.insertedText}" /><br/>
             <h:commandButton action="#{pageBean.createNote}" value="Zapisz" >
                 <f:ajax listener="#{pageBean.insertedText.resetValue()}" />
             </h:commandButton>
                 <br/>
-
+            </div>
             <h2>Aktywne notatki</h2>
             <ul>
                 <ui:repeat value="#{pageBean.showNotes()}" var="note">

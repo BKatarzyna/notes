@@ -30,7 +30,7 @@ public class Account extends AbstractEntity implements Serializable {
 
     @NotNull
     @Size(min = 1, max = 32)
-    @Column(name = "LOGIN", nullable = false)
+    @Column(name = "LOGIN", nullable = false, unique = true)
     private String login;
 
     @NotNull
